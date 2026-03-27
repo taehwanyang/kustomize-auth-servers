@@ -1,0 +1,29 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: ingress
+  namespace: auth
+spec:
+  ingressClassName: nginx
+  rules:
+    - host: auth.ythwork.com
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: authorization-server
+                port:
+                  number: 80
+
+    - host: resource.ythwork.com
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: resource-server
+                port:
+                  number: 80

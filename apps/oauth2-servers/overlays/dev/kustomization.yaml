@@ -1,0 +1,8 @@
+resources:
+  - ../../base
+
+namespace: dev
+
+patches:
+  - path: patch-authorization-server-deployment.yaml
+  - path: patch-resource-server-deployment.yaml

@@ -1,0 +1,6 @@
+resources:
+  - authorization-server-deployment.yaml
+  - authorization-server-service.yaml
+  - ingress.yaml
+  - resource-server-deployment.yaml
+  - resource-server-service.yaml
