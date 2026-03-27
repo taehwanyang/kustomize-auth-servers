@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: resource-server
-          image: ythwork/resource-server:0.0.1
+          image: ythwork/resource-server:0.0.2
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 8081
