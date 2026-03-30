@@ -2,7 +2,6 @@ apiVersion: cert-manager.io/v1
 kind: Certificate 
 metadata:
   name: auth-local-cert
-  namespace: dev
 spec:
   secretName: auth-local-tls
   dnsNames:
