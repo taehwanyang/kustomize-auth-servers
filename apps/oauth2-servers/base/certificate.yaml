@@ -5,7 +5,7 @@ metadata:
 spec:
   secretName: auth-local-tls
   dnsNames:
-    - ythworkcom
+    - ythwork.com
     - "*.ythwork.com"
   issuerRef:
     name: selfsigned-issuer
