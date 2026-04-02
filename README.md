@@ -8,8 +8,8 @@
     - resource.ythwork.com
   - macos이고 docker-desktop 쿠버네티스인 경우 /etc/hosts를 변경해도 안되는 경우가 있다. 
   - 이때는 아래와 같이 진행한다. 
-  - authorization server와 resource server의 서비스 대신 ingress controller 서비스를 포트포워딩한다.
-  - Self-signed Issuer이므로 TLS를 적용할 때 CA 인증을 하지 않기 위해 curl 요청시 -k 옵션을 추가한다.
+  - ingress controller 서비스를 포트포워딩한다.
+  - Self-signed Issuer이므로 TLS 인증서 검증을 하지 않기 위해 curl 요청시 -k 옵션을 추가한다.
 
 ```bash
 kubectl port-forward -n ingress-nginx svc/ingress-nginx-controller 8080:443
