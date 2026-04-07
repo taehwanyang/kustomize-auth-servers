@@ -6,3 +6,4 @@ resources:
   - ingress.yaml
   - issuer.yaml
   - certificate.yaml
+  - auth-jwt-key.yaml
