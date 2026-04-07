@@ -5,9 +5,9 @@ namespace: dev
 
 images:
   - name: ythwork/authorization-server
-    newTag: 0.0.2
+    newTag: 0.1.0
   - name: ythwork/resource-server
-    newTag: 0.0.2 
+    newTag: 0.1.0 
 
 patches:
   - path: patch-authorization-server-deployment.yaml
