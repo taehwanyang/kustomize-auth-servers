@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: authorization-server
-          image: ythwork/authorization-server:0.1.0
+          image: ythwork/authorization-server:0.1.5
           imagePullPolicy: IfNotPresent
           securityContext:
             runAsUser: 10001
@@ -32,6 +32,10 @@ spec:
           env:
             - name: SPRING_PROFILES_ACTIVE
               value: k3s
+          volumeMounts:
+            - name: jwt-key
+              mountPath: /etc/keys
+              readOnly: true
           livenessProbe:
             httpGet:
               path: /actuator/health/liveness
@@ -44,4 +48,7 @@ spec:
               port: 8080
             initialDelaySeconds: 20
             periodSeconds: 10
-          
+      volumes:
+        - name: jwt-key
+          secret:
+            secretName: auth-jwt-key
