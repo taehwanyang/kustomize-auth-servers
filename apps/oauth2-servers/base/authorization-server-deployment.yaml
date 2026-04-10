@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: authorization-server
-          image: ythwork/authorization-server:0.1.5
+          image: ythwork/authorization-server:1.0.0
           imagePullPolicy: IfNotPresent
           securityContext:
             runAsUser: 10001

@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: resource-server
-          image: ythwork/resource-server:0.1.0
+          image: ythwork/resource-server:1.0.0
           imagePullPolicy: IfNotPresent
           securityContext:
             runAsUser: 10001
