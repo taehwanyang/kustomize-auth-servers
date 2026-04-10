@@ -19,14 +19,13 @@ kubectl port-forward -n ingress-nginx svc/ingress-nginx-controller 8080:443
 ### Token 발급
 
 ```bash
-curl -u client:secret \
+curl -u client:secret123 \
   -X POST https://localhost:8080/oauth2/token \
   -H "Host: auth.ythwork.com" \
   -H "Content-Type: application/x-www-form-urlencoded" \
-  -d "grant_type=urn:ietf:params:oauth:grant-type:password&username=user&password=1234&scope=read" \
+  -d "grant_type=client_credentials&scope=read" \
   -k -v
 ```
-
 
 ---
 
